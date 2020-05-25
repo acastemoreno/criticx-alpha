@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :username
       t.string :email
       t.date :birth_date
-      t.integer :review_count
+      t.integer :review_count, default: 0
 
       t.timestamps
     end

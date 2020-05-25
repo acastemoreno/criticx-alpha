@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_210244) do
     t.string "username"
     t.string "email"
     t.date "birth_date"
-    t.integer "review_count"
+    t.integer "review_count", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
