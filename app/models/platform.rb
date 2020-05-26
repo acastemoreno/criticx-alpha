@@ -1,6 +1,12 @@
 class Platform < ApplicationRecord
+  ##Associations
   has_and_belongs_to_many :games
 
+  ##Validations
+  validates :name, :category, presence: true
+  validates :name, uniqueness: true
+
+  #Enum
   enum category: 
   {
     console: 0,
