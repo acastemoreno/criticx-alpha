@@ -1,0 +1,20 @@
+<h1>All games</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% for game in @games %>
+    <tr>
+      <td><%= game.name %></td>
+      <td><%= game.rating %></td>
+      <td><%= link_to "Show", game_path(game) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
