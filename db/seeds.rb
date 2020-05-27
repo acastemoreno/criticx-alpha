@@ -45,7 +45,7 @@ File.open("db/data_seed/games.json", "r") do |file|
 
   main_games, unsaved_games = 
     games
-    .map{|game_hash| game_hash.slice("name", "summary", "release_date", "category", "rating", "parent", "platforms", "genres") }
+    .map{|game_hash| game_hash.slice("name", "summary", "release_date", "category", "rating", "parent") }
     .partition{|game_hash| game_hash["category"]==0}
   
   saved_games = main_games.map{|game_hash| Game.create(game_hash)}
