@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CriticxAlpha</title>
+    <title>CriticxAlphaViews</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,11 +11,6 @@
   <body>
     <p><%= notice %></p>
     <p><%= alert %></p>
-
-    <% if current_user %> Has iniciado sesión como
-    <strong><%= current_user.username %></strong>! <%= link_to 'Log out',
-    session_path, method: :delete %> <% else %> <%= link_to 'Log in', login_path%>
-    <%= link_to 'Sign up', new_user_path %> <% end %> <%= yield %>
     <%= yield %>
   </body>
 </html>

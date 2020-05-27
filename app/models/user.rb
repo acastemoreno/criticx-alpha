@@ -7,6 +7,9 @@ class User < ApplicationRecord
   validates :username, :email, presence: true, uniqueness: true
   validate :valid_birth_date
 
+  ##use bcrypt (columna password_digest required)
+  has_secure_password
+
   ##Custom Validations
   private
   def valid_birth_date
